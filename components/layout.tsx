@@ -6,7 +6,7 @@ import { useDropzone } from 'react-dropzone';
 import { breakpoints, transitionDuration } from '../style-vars';
 import Asterisk from './asterisk';
 import InfoModal from './info-modal';
-import { OPEN_SOURCE_URL, MUX_HOME_PAGE_URL } from '../constants';
+import { HOST_URL, OPEN_SOURCE_URL, MUX_HOME_PAGE_URL } from '../constants';
 
 type AsteriskProps = {
   spinning?: boolean;
@@ -48,7 +48,7 @@ const Layout: React.FC<Props> = ({
   description,
   metaTitle,
   metaDescription,
-  image = "/stream-new-og-image.png",
+  image = `${HOST_URL}/stream-new-og-image.png`,
   onFileDrop,
   darkMode,
   centered,
